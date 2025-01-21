@@ -1,0 +1,86 @@
+body {
+    margin:0;
+    padding:0;
+    background-color: rgb(151, 183, 253);
+  }
+
+nav {
+    display: flex;
+    align-items: end;
+    background-color: rgb(151, 183, 253);
+    color: white;
+    height: 70px;
+    
+}
+
+a{
+    font-size: large;
+    font-family: Helvetica, sans-serif; 
+    color: white;
+    margin: 30px 30px 30px 30px; 
+    text-decoration: none;
+}
+
+form {
+    border-radius: 30px;
+    background-color: rgb(151, 183, 253);
+    padding: 20px;
+    margin: 0px 300px 0px 300px;
+    width: 50%;
+}
+
+input{ 
+    width: 100%; 
+    height: 25px;
+} 
+
+input[type=text]:focus { 
+    border:4px solid rgb(77, 77, 246); 
+} 
+
+fieldset {
+    text-decoration: none;
+    border-style: none;
+}
+
+legend{
+    font-family: Helvetica, sans-serif; 
+    font-size:25px;
+    color: white;
+}
+
+label {
+    font-family: Helvetica, sans-serif; 
+    color: white; 
+}
+
+div{
+    height: auto;
+    width: auto;
+    margin: 15px 50px 0px 50px; 
+    padding: 1px 10px 1px 10px; 
+    border-style: outset;
+    border-color: rgb(196, 196, 196);
+    border-radius: 20px;
+    background-color: white;
+}
+
+.contenedor h1, h2{
+    font-family: Helvetica, sans-serif; 
+    color: black; 
+    font-size: 40px;
+}
+
+button{
+    border-color: rgb(196, 196, 196);;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-style: inset;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}

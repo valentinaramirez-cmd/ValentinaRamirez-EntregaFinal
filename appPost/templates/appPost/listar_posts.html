@@ -1,0 +1,19 @@
+{% extends "appPost/base.html" %}
+{% block content %}
+{% if posts %}
+{% for p in posts %}
+<div class="contenedor">
+    <h2 class="title">{{p.titulo}}</h2> 
+    <img id="img" src="{{ post.imagen.url }}" alt="">
+    <img id="imagen-user" src="{{ p.user.avatar.imagen.url }}" alt=""><p class="user">{{p.user.username}}</p>
+
+    
+</div>
+<a href="{% url 'appPost:detail_post' pk=p.id %}">Ver detalle</a>
+{% endfor %}
+{% else %}
+<div>
+    <h1>No hay posts </h1>
+</div>
+{% endif %}
+{% endblock content %}

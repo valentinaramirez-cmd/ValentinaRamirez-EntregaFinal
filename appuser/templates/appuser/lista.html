@@ -1,0 +1,18 @@
+{% extends "appuser/base.html" %}
+
+{% block content %}
+{% for user in users%}
+<h1>{{user.user}}</h1>
+<div>
+    <h2>Nombre: {{user.nombre_completo}}</h2>
+    <h2>Gmail: {{user.gmail}}</h2>
+    <h2>Cumpleaños: {{user.fecha_nacimiento}}</h2>
+    <p>Descripcion: {{user.descripcion}}</p>
+
+    <button><a href="{% url 'appuser:update_user' pk=user.id %}"></a></button>
+    <button><a href="{% url 'appuser:delete_user' pk=user.id %}"></a></button>
+
+</div>
+{% endfor %}
+{% endblock content %}
+

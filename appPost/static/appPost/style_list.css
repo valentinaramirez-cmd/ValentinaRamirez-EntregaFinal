@@ -1,0 +1,20 @@
+.contendor{
+    height: auto;
+    width: auto;
+    margin: 50px; 
+}
+
+.contenedor h2{
+    font-family: Helvetica, sans-serif; 
+    color: white;
+}
+
+.user {
+    font-family: Helvetica, sans-serif; 
+    color: rgb(0, 0, 0);
+}
+
+.fecha {
+    color: grey;
+    font-size: small;
+}

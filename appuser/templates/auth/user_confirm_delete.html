@@ -1,0 +1,15 @@
+{% extends "appuser/base.html" %}
+
+{% block content %}
+
+<h1>Esta seguro de eliminar el perfil?</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sí, eliminar cuenta</button>
+    <a href="{% url 'appuser:detail_user' %}">Cancelar</a>
+</form>
+
+{% endblock content %}
+
+

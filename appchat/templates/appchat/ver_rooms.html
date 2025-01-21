@@ -1,0 +1,15 @@
+{% extends "appchat/base.html" %}
+{% block content %}
+<a href="{% url 'appchat:create_chatroom' %}"><button>Crear chatroom</button></a>
+{% if  rooms %}
+{% for r in rooms %}
+<div class="contenedor">
+    <h2 class="title">{{r.nombre}}</h2>
+</div>
+{% endfor %}
+{% else %}
+<div>
+    <h1>No hay chatrooms disponibles</h1>
+</div>
+{% endif %}
+{% endblock content %}

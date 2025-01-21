@@ -1,0 +1,15 @@
+{% extends "appPost/base.html" %}
+
+{% block content %}
+
+<h1>Esta seguro de eliminar el post?</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sí, eliminar post</button>
+    <a href="{% url 'appPost:menu' %}">Cancelar</a>
+</form>
+
+{% endblock content %}
+
+

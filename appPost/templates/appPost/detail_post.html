@@ -1,0 +1,18 @@
+{% extends "appPost/base.html" %}
+{% block content %}
+<div class="contenedor">
+    <h2 class="title">{{post.titulo}}</h2>
+    <p class="texto">{{post.texto}}</p>
+    <p class="fecha">{{post.fecha}}</p>
+    <img id="img" src="{{ post.imagen.url }}" alt="">
+    <p>{{post.epigrafe}}</p>
+    <img id="imagen-user" src="{{ post.user.avatar.imagen.url }}" alt=""><p class="user">{{post.user.username}}</p>
+
+    
+</div>
+{% if post.user.id == request.user.id %}
+<a href="{% url 'appPost:delete_post' post.id %}">Eliminar</a>
+<a href="{% url 'appPost:editar_post' post.id %}">Editar</a>
+{% endif %}
+
+{% endblock content %}

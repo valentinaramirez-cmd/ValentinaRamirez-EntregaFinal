@@ -1,0 +1,18 @@
+{% extends "appchat/base.html" %}
+
+{% block content %}
+{% if room %}
+<div>
+    <h1>{{room.nombre}}</h1>
+    {% for m in room.mensajes %}
+    <div>
+    <p>{{m.mensaje}}</p>
+    <h5>{{m.user}}</h5>
+    <h5>{{m.fecha}}</h5>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div><h1>No existe el chatroom</h1></div>
+{% endif %}
+{% endblock content %}

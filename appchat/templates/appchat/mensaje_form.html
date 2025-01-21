@@ -1,0 +1,15 @@
+
+{% block content %}
+<form  method="post">
+    
+    <fieldset>
+        <legend>Escribe aqui</legend>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Postear</button>
+        <button type="reset">Borrar todo</button>
+
+    </fieldset>
+
+</form>
+{% endblock content %}

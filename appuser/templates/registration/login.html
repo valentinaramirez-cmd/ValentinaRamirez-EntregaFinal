@@ -1,0 +1,16 @@
+{% extends "appuser/base.html" %}
+
+{% block content %}
+<form  method="post" enctype="multipart/form-data">
+    
+    <fieldset>
+        <legend>Iniciar Sesion</legend>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+        <button type="reset">Limpiar</button>
+
+    </fieldset>
+
+</form>
+{% endblock content %}

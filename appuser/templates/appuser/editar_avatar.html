@@ -1,0 +1,13 @@
+{% extends "appuser/base.html" %}
+
+{% block content %}
+  <h2>Subir Avatar</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <img src="{{user.avatar.imagen.url}}" alt="">
+    <button type="submit">Cambiar</button>
+    <a href="{% url 'appuser:update_user' %}"><button>Cancelar</button></a>
+  </form>
+{% endblock %}
+

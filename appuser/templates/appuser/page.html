@@ -1,0 +1,14 @@
+{% extends "appuser/base.html" %}
+
+{% block content %}
+
+{% for p in posts %}
+
+<div>
+    {{p.fecha}}
+    {{p.descripcion}}
+</div>
+
+{% endfor %}
+
+{% endblock content %}

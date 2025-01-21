@@ -1,0 +1,21 @@
+{% extends "appuser/base.html" %}
+
+{% block content %}
+
+
+<div class="contenedor">
+    <img src="{{user.avatar.imagen.url}}" alt="">
+    <h1 id="username">{{user.username}}</h1>
+    <h2 id="nombre">Nombre: {{user.first_name}} {{user.last_name}}</h2>
+    <h2 id="gmail">Gmail: {{user.email}}</h2>
+
+    <a href="{% url 'appuser:update_user' %}"><button>Editar datos</button></a>
+    <a href="{% url 'appuser:editar_avatar' %}"><button>Editar avatar</button></a>
+    <a href="{% url 'appuser:delete_user' %}"><button>Eliminar</button></a>
+    <a href="{% url 'appPost:ver_posts' pk=user.id %}"><button>Mis posts</button></a>
+    <a href="{% url 'appuser:logout' %}"><button>Cerrar sesion</button></a>
+
+</div>
+
+{% endblock content %}
+

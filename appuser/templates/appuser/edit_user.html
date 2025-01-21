@@ -1,0 +1,18 @@
+{% extends "appuser/base.html" %}
+
+{% block content %}
+<h1>Editar usuario</h1>
+<form  method="post">
+    
+    {% csrf_token %}
+    {{ form.as_p }}
+    <img src="{{user.avatar.imagen.url}}" alt="">
+    <a href="{% url 'appuser:editar_avatar' %}"><button>Editar avatar</button></a>
+    <button type="submit">Guardar</button>
+    <button type="reset">Cancelar</button>
+    
+
+</form>
+{% endblock content %}
+
+
